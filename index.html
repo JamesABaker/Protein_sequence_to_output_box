@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+ <head>
+ <meta charset = "UTF-8">
+ <title>textBoxes.html</title>
+
+
+
+ <script type = "text/javascript">
+  // from textBoxes.html
+  function calc(){
+      var name, txtName, txtOutput;
+      txtName = document.getElementById('txtName');
+      txtOutput = document.getElementById('txtOutput');
+      name = txtName.value + "Larry";
+      txtOutput.value = name;
+} // end calc
+ </script>
+
+
+
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "textBoxes.css" />
+ </head>
+
+
+
+ <body>
+ <h1>Text Box Input and Output</h1>
+ <form action = "">
+  <fieldset>
+  <label>Type your protein transmembrane sequence here: </label>
+  <br>
+  <br>
+
+  <input type = "text"
+    id = "txtName" />
+    <br>  <br>
+  <input type = "button"
+    value = "calculate"
+    onclick = "calc()"/>
+    <br>
+    <br>
+    <br>
+    <br>
+  <label> TM reliability score. </label>
+  <br>
+  <br>
+  <input type = "text"
+    id = "txtOutput" />
+  </fieldset>
+ </form>
+ </body>
+</html>
