@@ -35,14 +35,17 @@
 
   sequence_counter = 0;
 
+  calculation = 0;
+
   for (i = 0, len = sequence.length; i < len; i++) {
     x = sequence[i];
     sequence_counter = sequence_counter + 1;
     residue_hydrophobicity = kd[x];
     hydrophobicity.push(residue_hydrophobicity);
+    calculation = calculation + residue_hydrophobicity;
   }
 
-  calculation = hydrophobicity * 10;
+  calculation = calculation / sequence_counter;
 
   output = calculation;
 
