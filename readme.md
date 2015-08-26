@@ -17,3 +17,9 @@
             // stop pasting here!
             } // end calc
         </script>
+
+ 4. Open `index.html` in a web browser.
+
+ 5. Enter protein sequence into the input box.
+
+ 6. Click "*calculate*" and check output.
