@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang = "en-US">
+<html lang = "en-UK">
+
+<!-- Fonts preloaded from google. -->
+<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
  <head>
  <meta charset = "UTF-8">
@@ -72,20 +75,36 @@
   } // end calc
  </script>
 
-
-
  <link rel = "stylesheet"
    type = "text/css"
    href = "textBoxes.css" />
  </head>
 
+ <style>
 
+ div.h1 {
+     font-family: 'Pontano sans';
+     margin:20px;
+     padding:20px;
+ }
+
+ div.box {
+     font-family: 'Pontano sans';
+     margin:20px;
+     padding:20px;
+ }
+ </style>
 
  <body>
- <h1>Sequence input, text output</h1>
+
+<div class='h1'>
+ <h1>Sequence calculator title</h1>
+</div>
+
+<div class = 'box'>
  <form action = "">
   <fieldset>
-  <label>Type your protein transmembrane sequence here: </label>
+  <label>Type your sequence here: </label>
   <br>
   <br>
 
@@ -95,16 +114,20 @@
   <input type = "button"
     value = "calculate"
     onclick = "calc()"/>
+
     <br>
     <br>
     <br>
     <br>
-  <label> TM reliability score. </label>
+  <label> Score appears here. </label>
   <br>
   <br>
   <input type = "text"
     id = "txtOutput" />
   </fieldset>
  </form>
+ </div>
+
+
  </body>
 </html>
