@@ -1,3 +1,28 @@
+<!--The MIT License (MIT)
+
+Copyright (c) 2015 James Baker - University of Manchester
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en-UK">
 
@@ -85,24 +110,22 @@
 <!--CSS classes-->
 
 <style>
+  /*Background*/
 
-
-/*Background*/
   div.page {
-    background-color:#fffae8;
+    background-color: #fffae8;
   }
+  /*Title, boxes, and referenes.*/
 
+  div.content {}
 
-/*Title, boxes, and referenes.*/
-  div.content {
-  }
   a {
     text-decoration: none;
     color: #8bb9be;
     font-weight: 700;
   }
+  /* titles*/
 
-/* titles*/
   h1,
   h2,
   h3,
@@ -110,20 +133,21 @@
   h5,
   h6,
   h7 {
-    font-weight: 300;
+    font-weight: 100;
   }
 
   div.h1 {
-    font-family: 'Open sans', ‘Metrophobic’, Arial, serif;
+    font-family: 'roboto slab', ‘Metrophobic’, Arial, serif;
     font-style: normal;
+    font-size: 12pt;
     text-align: center;
     background-color: #8bb9be;
     color: white;
-    padding: 20px;
-
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
   }
-
-/* the calculations*/
+  /* the calculations*/
 
   div.box {
     font-family: 'Open sans', ‘Metrophobic’, Arial, serif;
@@ -133,11 +157,11 @@
   }
 
   fieldset {
+    margin-top: 120px;
     border: 0;
   }
+  /* references*/
 
-
-/* references*/
   div.references {
     bottom: 10px;
     font-family: 'Open sans', ‘Metrophobic’, Arial, serif;
@@ -145,15 +169,12 @@
     font-size: 12px;
     padding: 10px;
     padding-top: 200px;
-
-
   }
-
 </style>
 
 <!-- Fonts from google. -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic,700italic' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700,300' rel='stylesheet' type='text/css'>
 
 
 <!-- HTML layout -->
@@ -163,41 +184,41 @@
   <div class='page'>
 
     <div class='content'>
-    <div class='h1'>
-      <h1>Sequence calculator title</h1>
+      <div class='h1'>
+        <h1>Sequence calculator title</h1>
+      </div>
+
+      <div class='box'>
+        <form action="">
+          <fieldset>
+            <label>Type your sequence here. </label>
+            <br>
+            <br>
+
+            <input type="text" id="txtInput">
+            <br>
+            <br>
+            <input type="button" value="calculate" onclick="calc()" />
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <label> Score appears here. </label>
+            <br>
+            <br>
+            <input type="text" id="txtOutput" readonly>
+          </fieldset>
+
+        </form>
+      </div>
+
+      <div class="references">
+
+        This is open source under the <a href="license.md"> MIT license </a>.
+
+      </div>
     </div>
-
-    <div class='box'>
-      <form action="">
-        <fieldset>
-          <label>Type your sequence here. </label>
-          <br>
-          <br>
-
-          <input type="text" id="txtInput">
-          <br>
-          <br>
-          <input type="button" value="calculate" onclick="calc()" />
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <label> Score appears here. </label>
-          <br>
-          <br>
-          <input type="text" id="txtOutput" readonly>
-        </fieldset>
-
-      </form>
-    </div>
-
-    <div class = "references">
-
-      This is open source under the <a href="license.md"> MIT license </a>.
-
-    </div>
-  </div>
 </body>
 
 </html>

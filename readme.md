@@ -27,6 +27,8 @@ The placeholder script calculates the average Kyte & Doolittle hydrophobicity of
 
  6. Click "*calculate*" and check output.
 
+ 7. Jump to "`<\!--HTML layout-->`" in index.html to edit the web server text.
+
 
 # About
 ## Why CoffeeScript?
@@ -38,9 +40,11 @@ The placeholder script calculates the average Kyte & Doolittle hydrophobicity of
  - Quick for light tasks.
  - No real need for downtime - there are no server-side caches or file clogs to deal with.
  - No issues with multi user access.
+ - Code is openly readable.
 
 ### Cons
 
  - Gets slow on longer scripts.
  - Relies on client computer specifications.
  - `javascript` is notoriously difficult to debug.
+ - Code is openly readable.
