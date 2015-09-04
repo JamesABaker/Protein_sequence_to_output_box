@@ -15,7 +15,7 @@ kd = {'A': 1.8; 'R':-4.5; 'N':-3.5; 'D':-3.5; 'C': 2.5; 'Q':-3.5; 'E':-3.5; 'G':
 hydrophobicity = []
 sequence_counter = 0
 calculation = 0
-
+l
 for x in sequence
   sequence_counter = sequence_counter + 1
   residue_hydrophobicity = kd[x]
