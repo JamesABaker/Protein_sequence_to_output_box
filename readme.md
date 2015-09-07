@@ -27,7 +27,7 @@ The placeholder script calculates the average Kyte & Doolittle hydrophobicity of
 
  6. Click "*calculate*" and check output.
 
- 7. Jump to "`<\!--HTML layout-->`" in index.html to edit the web server text.
+ 7. Jump to "`<!--HTML layout-->`" in index.html to edit the web server text.
 
 
 # About
