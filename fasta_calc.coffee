@@ -9,21 +9,23 @@ sequence = txtInput.value
 
 #Calculation. Replace your own functions here. This is an example of a calculator using the Kyte and Doolittle hydropathy profiles.
 
-#Kyte and Doolittle Hydrophobicity values.
-kd = {'A': 1.8; 'R':-4.5; 'N':-3.5; 'D':-3.5; 'C': 2.5; 'Q':-3.5; 'E':-3.5; 'G':-0.4; 'H':-3.2; 'I': 4.5; 'L': 3.8;'K':-3.9; 'M':1.9; 'F': 2.8; 'P':-1.6;'S':-0.8; 'T':-0.7; 'W':-0.9; 'Y':-1.3; 'V': 4.2}
+leucine = {0.632036342, 0.86904997, 0.632036342, 0.632036342, 1.915860162, 2.824412404, 3.140430575, 3.29843966, 3.515702153, 3.357693067, 3.57495556, 3.772466917, 4.246494173, 4.009480545, 4.30574758, 4.048982817, 3.634208967, 3.239186253, 2.824412404, 2.982421489, 2.42938969, 2.70590559, 2.271380604, 2.646652183, 2.350385147, 1.876357891, 1.027059056, 0.770294292, 1.14556587, 1.14556587, 0.651787478}
 
 #Replaces sequence with hydrophobicity values
 hydrophobicity = []
 sequence_counter = 0
-calculation = 0
-l
-for sequence_position in sequence
-  sequence_counter = sequence_counter + 1
-  residue_hydrophobicity = kd[sequence_position]
-  hydrophobicity.push residue_hydrophobicity
-  calculation = calculation + residue_hydrophobicity
+hscore = []
 
-calculation = calculation/sequence_counter
+for sequence_position in sequence
+  residue_hscore = 0
+  if sequence_position is 'L'
+    residue_hscore = residue_hscore + leucine[sequence_position]
+  sequence_counter = sequence_counter + 1
+  hscore.push residue_hscore
+
+
+
+calculation = hscore
 
 output = calculation
 
